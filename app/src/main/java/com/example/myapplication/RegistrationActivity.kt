@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.example.myapplication.entity.Benutzer
+import com.example.myapplication.data.Benutzer
 import com.example.myapplication.data.UserViewModel
 
 class RegistrationActivity : AppCompatActivity() {

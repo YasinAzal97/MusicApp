@@ -8,8 +8,6 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import androidx.room.Room
-import com.example.myapplication.data.UserDatabase
 import com.example.myapplication.data.UserViewModel
 
 class MainActivity : AppCompatActivity() {

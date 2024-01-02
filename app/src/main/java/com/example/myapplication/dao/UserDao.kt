@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.example.myapplication.entity.Benutzer
+import com.example.myapplication.data.Benutzer
 
 @Dao
 interface UserDao {
@@ -17,5 +17,8 @@ interface UserDao {
 
     @Query("SELECT * FROM Benutzer ORDER BY BenutzerID ASC")
     fun readAllData(): LiveData<List<Benutzer>>
+
+    @Query("DELETE FROM Benutzer")
+    fun deleteAllUsers()
 
 }

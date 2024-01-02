@@ -5,7 +5,6 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.myapplication.dao.UserDao
-import com.example.myapplication.entity.Benutzer
 
 // Definiert die Datenbank mit der Entität "Benutzer", Version 1 und deaktivierter Schema-Exportierung
 @Database(entities = [Benutzer::class], version = 1, exportSchema = false)
@@ -22,7 +21,7 @@ abstract class UserDatabase: RoomDatabase() {
         private var INSTANCE: UserDatabase? = null
 
         // Funktion zum Abrufen der Datenbankinstanz
-        fun getDatabase(context: Context): UserDatabase{
+        fun getDatabase(context: Context): UserDatabase {
             // Holt sich die aktuelle Instanz (falls vorhanden)
             val tempInstance = INSTANCE
             if(tempInstance != null){
@@ -37,7 +36,8 @@ abstract class UserDatabase: RoomDatabase() {
                     "testdb"
                 ).allowMainThreadQueries().build()
                 INSTANCE = instance
-                instance.openHelper.writableDatabase// Weist die neu erstellte Instanz der Variablen zu
+                instance.openHelper.writableDatabase
+                instance.userDao().deleteAllUsers()
                 return instance // Gibt die neue Instanz zurück
             }
         }
