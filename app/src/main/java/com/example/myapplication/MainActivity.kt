@@ -37,7 +37,6 @@ class MainActivity : AppCompatActivity() {
             else {
                 Toast.makeText(this, "Falsche Anmeldeinformationen", Toast.LENGTH_SHORT).show()
             }
-
         }
     }
 

@@ -9,6 +9,6 @@ data class Kuenstler(
     @PrimaryKey @ColumnInfo(name = "kuenstlerID") val kuenstlerID: Int,
     @ColumnInfo(name = "name") val name: String,
     @ColumnInfo(name = "eMail") val eMail: String,
-    @ColumnInfo(name = "adresse") val adresse: String,
+    @ColumnInfo(name = "adresse") val ort: String,
     @ColumnInfo(name = "style") val style: String
 )

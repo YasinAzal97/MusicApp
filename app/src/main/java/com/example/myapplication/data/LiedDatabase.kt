@@ -5,18 +5,16 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.myapplication.dao.LiederDao
-import com.example.myapplication.dao.UserDao
 
-@Database(entities = [Benutzer::class, Lied::class], version = 1, exportSchema = false)
-abstract class UserDatabase: RoomDatabase() {
-    abstract fun userDao(): UserDao
+@Database(entities = [Lied::class], version = 1, exportSchema = false)
+abstract class LiedDatabase: RoomDatabase() {
     abstract fun liedDao(): LiederDao
 
     companion object{
 
         @Volatile
-        private var INSTANCE: UserDatabase? = null
-        fun getDatabase(context: Context): UserDatabase {
+        private var INSTANCE: LiedDatabase? = null
+        fun getDatabase(context: Context): LiedDatabase {
             val tempInstance = INSTANCE
             if(tempInstance != null){
                 return tempInstance
@@ -24,12 +22,12 @@ abstract class UserDatabase: RoomDatabase() {
             synchronized(this){
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    UserDatabase::class.java,
+                    LiedDatabase::class.java,
                     "testdb"
                 ).allowMainThreadQueries().build()
                 INSTANCE = instance
                 instance.openHelper.writableDatabase
-                instance.userDao().deleteAllUsers()
+                instance.liedDao().deleteAllUsers()
                 return instance
             }
         }

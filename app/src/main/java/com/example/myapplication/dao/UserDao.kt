@@ -8,7 +8,6 @@ import com.example.myapplication.data.Benutzer
 
 @Dao
 interface UserDao {
-
     @Insert()
     fun insertBenutzer(benutzer: Benutzer)
 
