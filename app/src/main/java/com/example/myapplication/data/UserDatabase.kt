@@ -5,6 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.myapplication.dao.UserDao
+import com.example.myapplication.entity.Benutzer
 
 // Definiert die Datenbank mit der Entität "Benutzer", Version 1 und deaktivierter Schema-Exportierung
 @Database(entities = [Benutzer::class], version = 1, exportSchema = false)

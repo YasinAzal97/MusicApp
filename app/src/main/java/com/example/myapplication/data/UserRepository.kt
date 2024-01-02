@@ -1,7 +1,7 @@
 package com.example.myapplication.data
 
 import androidx.lifecycle.LiveData
-import com.example.myapplication.dao.UserDao
+import com.example.myapplication.entity.Benutzer
 
 class UserRepository(private val userDao: UserDao) {
 

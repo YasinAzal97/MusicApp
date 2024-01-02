@@ -5,17 +5,10 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import androidx.room.Room
-import com.example.myapplication.data.Benutzer
-import com.example.myapplication.data.UserDatabase
+import com.example.myapplication.entity.Benutzer
 import com.example.myapplication.data.UserViewModel
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
-import kotlin.concurrent.thread
 
 class RegistrationActivity : AppCompatActivity() {
 

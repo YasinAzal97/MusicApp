@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
-import com.example.myapplication.dao.UserDao
+import com.example.myapplication.entity.Benutzer
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
