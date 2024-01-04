@@ -13,6 +13,7 @@ import com.example.myapplication.data.UserViewModel
 class MainActivity : AppCompatActivity() {
     private lateinit var mUserViewModel: UserViewModel
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
         super.onCreate(savedInstanceState)

@@ -4,20 +4,18 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 
-
-class LiedViewModel(application: Application): AndroidViewModel(application) {
-
+class KuenstlerViewModel (application: Application): AndroidViewModel(application) {
     // LiveData für die Liste aller Benutzer
-    val readAllData: LiveData<List<Lied>>
+    val readAllData: LiveData<List<Kuenstler>>
     // Repository zur Behandlung von Datenzugriffe
-    private val repository: LiedRepository
+    private val repository: KuenstlerRepo
 
     var db: UserDatabase = UserDatabase.getDatabase(application);
     init {
         // Zugriff auf die UserDao-Datenbank
-        val liedDao = db.liedDao()
+        val kuenstlerDao = db.kuenstlerDao()
         // Initialisierung des UserRepository mit dem UserDao
-        repository = LiedRepository(liedDao)
+        repository =  KuenstlerRepo(kuenstlerDao)
         // Abrufen der LiveData-Liste aller Benutzer über das Repository
         readAllData = repository.readAllData
     }

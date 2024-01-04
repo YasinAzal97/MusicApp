@@ -4,13 +4,15 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.myapplication.dao.KuenstlerDao
 import com.example.myapplication.dao.LiederDao
 import com.example.myapplication.dao.UserDao
 
-@Database(entities = [Benutzer::class, Lied::class], version = 1, exportSchema = false)
+@Database(entities = [Benutzer::class, Lied::class, Kuenstler::class], version = 1, exportSchema = false)
 abstract class UserDatabase: RoomDatabase() {
     abstract fun userDao(): UserDao
     abstract fun liedDao(): LiederDao
+    abstract fun kuenstlerDao(): KuenstlerDao
 
     companion object{
 
@@ -26,10 +28,13 @@ abstract class UserDatabase: RoomDatabase() {
                     context.applicationContext,
                     UserDatabase::class.java,
                     "testdb"
-                ).allowMainThreadQueries().build()
+                )
+                    .fallbackToDestructiveMigration()
+                    .allowMainThreadQueries()
+                    .build()
                 INSTANCE = instance
                 instance.openHelper.writableDatabase
-                instance.userDao().deleteAllUsers()
+
                 return instance
             }
         }
