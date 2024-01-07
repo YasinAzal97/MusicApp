@@ -1,7 +1,8 @@
-package com.example.myapplication.data
+package com.example.myapplication.db.repo
 
 import androidx.lifecycle.LiveData
-import com.example.myapplication.dao.LiederDao
+import com.example.myapplication.db.dao.LiederDao
+import com.example.myapplication.db.entity.Lied
 
 class LiedRepository(private val liedDao: LiederDao) {
 
@@ -10,8 +11,4 @@ class LiedRepository(private val liedDao: LiederDao) {
     suspend fun addLied(lied: Lied) {
         liedDao.insertLied(lied)
     }
-
-    /*suspend fun searchUser(username: String, password: String) {
-        liedDao.getUserByUsernameAndPassword(username,password)
-    }*/
 }

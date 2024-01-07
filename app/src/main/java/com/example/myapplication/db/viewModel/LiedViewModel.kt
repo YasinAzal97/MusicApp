@@ -1,8 +1,11 @@
-package com.example.myapplication.data
+package com.example.myapplication.db.viewModel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
+import com.example.myapplication.db.UserDatabase
+import com.example.myapplication.db.entity.Lied
+import com.example.myapplication.db.repo.LiedRepository
 
 
 class LiedViewModel(application: Application): AndroidViewModel(application) {

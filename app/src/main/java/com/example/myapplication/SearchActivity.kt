@@ -6,12 +6,12 @@ import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.myapplication.data.Kuenstler
-import com.example.myapplication.data.KuenstlerAdapter
-import com.example.myapplication.data.KuenstlerViewModel
-import com.example.myapplication.data.Lied
-import com.example.myapplication.data.LiedAdapter
-import com.example.myapplication.data.LiedViewModel
+import com.example.myapplication.db.entity.Kuenstler
+import com.example.myapplication.adapter.KuenstlerAdapter
+import com.example.myapplication.db.viewModel.KuenstlerViewModel
+import com.example.myapplication.db.entity.Lied
+import com.example.myapplication.adapter.LiedAdapter
+import com.example.myapplication.db.viewModel.LiedViewModel
 
 class SearchActivity : AppCompatActivity() {
     private lateinit var mLiedViewModel: LiedViewModel

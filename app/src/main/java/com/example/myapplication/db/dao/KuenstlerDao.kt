@@ -1,10 +1,10 @@
-package com.example.myapplication.dao
+package com.example.myapplication.db.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.example.myapplication.data.Kuenstler
+import com.example.myapplication.db.entity.Kuenstler
 
 
 @Dao

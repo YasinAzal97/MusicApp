@@ -8,7 +8,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.example.myapplication.data.UserViewModel
+import com.example.myapplication.db.viewModel.UserViewModel
 
 class MainActivity : AppCompatActivity() {
     private lateinit var mUserViewModel: UserViewModel

@@ -1,12 +1,15 @@
-package com.example.myapplication.data
+package com.example.myapplication.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.myapplication.dao.KuenstlerDao
-import com.example.myapplication.dao.LiederDao
-import com.example.myapplication.dao.UserDao
+import com.example.myapplication.db.dao.KuenstlerDao
+import com.example.myapplication.db.dao.LiederDao
+import com.example.myapplication.db.dao.UserDao
+import com.example.myapplication.db.entity.Benutzer
+import com.example.myapplication.db.entity.Kuenstler
+import com.example.myapplication.db.entity.Lied
 
 @Database(entities = [Benutzer::class, Lied::class, Kuenstler::class], version = 1, exportSchema = false)
 abstract class UserDatabase: RoomDatabase() {
