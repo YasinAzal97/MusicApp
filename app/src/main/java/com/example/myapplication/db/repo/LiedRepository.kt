@@ -1,14 +1,13 @@
 package com.example.myapplication.db.repo
 
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MediatorLiveData
+import androidx.lifecycle.MutableLiveData
 import com.example.myapplication.db.dao.LiederDao
-import com.example.myapplication.db.entity.Lied
+import com.example.myapplication.db.entity.LiedMitKuenstler
 
 class LiedRepository(private val liedDao: LiederDao) {
 
-    val readAllData: LiveData<List<Lied>> = liedDao.readAllData()
-
-    suspend fun addLied(lied: Lied) {
-        liedDao.insertLied(lied)
-    }
+    val readAllDataMitKuenstler: List<LiedMitKuenstler> =
+        liedDao.readAllDataLiedMitKuenstler()
 }

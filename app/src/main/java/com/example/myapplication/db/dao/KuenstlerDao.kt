@@ -13,8 +13,8 @@ interface KuenstlerDao {
     fun insertKuenstler(kuenstler: Kuenstler)
 
     @Query("DELETE FROM Kuenstler")
-    fun deleteAllUsers()
+    fun deleteAllKuenstler()
 
     @Query("SELECT * FROM Kuenstler ORDER BY kuenstlerID ASC")
-    fun readAllData(): LiveData<List<Kuenstler>>
+    fun readAllData(): List<Kuenstler>
 }

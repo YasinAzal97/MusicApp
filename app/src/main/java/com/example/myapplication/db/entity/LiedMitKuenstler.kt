@@ -6,8 +6,8 @@ import androidx.room.Relation
 data class LiedMitKuenstler(
     @Embedded val lied: Lied,
     @Relation(
-        parentColumn = "kuenstlerID",
-        entityColumn = "liedID"
+        parentColumn = "liedID",
+        entityColumn = "kuenstlerID"
     )
     val kuenstler: Kuenstler
 )

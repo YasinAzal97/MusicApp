@@ -12,4 +12,5 @@ data class Lied(
     @ColumnInfo(name = "jahr") val jahr: Int,
     @ColumnInfo(name = "genre") val genre: String,
     @ColumnInfo(name = "kuenstlerID") val kuenstlerID: Int,
+    @ColumnInfo(name = "songAsMp3") val songAsMp3: String,
 )
