@@ -43,13 +43,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textWelcome" />
 
-    <Button
+    <ImageButton
         android:id="@+id/button"
         android:layout_width="46dp"
         android:layout_height="48dp"
         android:layout_marginStart="332dp"
         android:layout_marginTop="110dp"
         android:text="Button"
+        android:background="@drawable/baseline_location_searching_24"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/simpleSearchView"
