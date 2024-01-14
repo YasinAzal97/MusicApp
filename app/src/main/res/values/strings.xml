@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="my_map_api_key">AIzaSyBd8LjDB7UJGNMfxSu5kiz2Mcw3kL4Dzd8</string>
 </resources>

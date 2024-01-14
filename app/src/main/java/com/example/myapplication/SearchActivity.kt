@@ -1,6 +1,8 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageButton
 import android.widget.ListView
 import android.widget.SearchView
 import androidx.appcompat.app.AppCompatActivity
@@ -20,10 +22,15 @@ class SearchActivity : AppCompatActivity() {
         test()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
-
-
         initListView()
         initSearchView()
+
+        val imageButton = findViewById<ImageButton>(R.id.imageButtonLocation)
+
+        imageButton.setOnClickListener {
+            val intent = Intent(this, MapsActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun initListView() {
@@ -34,6 +41,7 @@ class SearchActivity : AppCompatActivity() {
             val adapter = LiedAdapter(this, lieder)
             listView.adapter = adapter
         })
+
     }
 
     fun initSearchView() {
